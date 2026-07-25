@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import "tailwindcss";
+
+
+:root{
+    --noir-bg: #0a0a0b;
+    --noir-card: #141416cc;
+    --gold-royal: #dca011;
+    --gold-champagne: #f4d068;
+    --text-muted: #a0a0a0;
+    --glass-border: #dca01126;
+}
+
+
+:root {
+    --purple-deep: #2d1244;
+    --purple-royal: #3e1e5e;
+    --purple-accent: #6c3e91;
+    --midnight: #2d1244;
+    --navy: var(--purple-royal);
+    --navy-dark: var(--purple-deep);
+    --navy-light: var(--purple-accent);
+    --gold: #dca011;
+    --gold-light: #f4d068;
+    --gold-dark: #b5840b;
+    --gold-shimmer: linear-gradient(135deg, #b5840b 0%, #dca011 50%, #f4d068 100%);
+    --bg-light: #fbf9f6;
+    --bg-white: #fff;
+    --text-dark: #2d1244;
+    --text-light: #8a8a8a;
+    --text-white: #fff;
+    --font-sans: "Tajawal", "Montserrat", sans-serif;
+    --font-serif: "Amiri", "Playfair Display", serif;
+    --shadow-premium: 0 30px 60px -12px #2d124426;
+}
+
+body{
+    direction: rtl;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    scroll-behavior: smooth;
+    background-color: var(--bg-light);
+    overflow-x: hidde;
+}
+
+@keyframes slider {
+    from{transform: translateX(0%);}
+    to{transform: translateX(50%);}
+}
+
+.animate-slider{
+    animation: slider 20s infinite linear;
+}
