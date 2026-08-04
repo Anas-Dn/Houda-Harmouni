@@ -41,7 +41,7 @@ body{
     font-style: normal;
     scroll-behavior: smooth;
     background-color: var(--bg-light);
-    overflow-x: hidde;
+    overflow-x: hidden;
 }
 
 @keyframes slider {
@@ -51,4 +51,14 @@ body{
 
 .animate-slider{
     animation: slider 20s infinite linear;
+}
+
+@keyframes UpDown {
+    0%{transform: translateY(0px);}
+    50%{transform: translateY(-30px);}
+    100%{transform: translateY(0px);}
+}
+
+.UpDown{
+    animation: UpDown 6s infinite linear;
 }

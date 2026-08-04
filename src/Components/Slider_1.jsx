@@ -2,7 +2,7 @@ import { Sparkles } from "lucide-react";
 
 export default function Slider_1() {
   return (
-    <div className="my-20 overflow-x-hidden">
+    <div className="my-8 overflow-x-hidden">
       <div className="h-25 w-screen bg-(--purple-deep) flex items-center">
       <div className=" flex gap-26 items-center animate-slider">
         <div className="flex gap-4"><Sparkles className="w-4 h-4 text-(--gold)" /> <p className="font-medium text-(--text-white) w-fit whitespace-nowrap">الاستمتاع</p></div>
