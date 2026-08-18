@@ -52,6 +52,12 @@ body{
 .animate-slider{
     animation: slider 20s infinite linear;
 }
+.animate-slider-2{
+    animation: slider 38s infinite linear;
+}
+.animate-slider-2:hover{
+    animation-play-state: paused;
+}
 
 @keyframes UpDown {
     0%{transform: translateY(0px);}
