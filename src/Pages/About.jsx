@@ -4,7 +4,7 @@ import AboutStory from "../Components/AboutStory";
 
 export default function About() {
   return (
-    <div className="relative bg-(--purple-royal) px-10">
+    <div className="relative bg-(--purple-royal)">
       <AboutHero />
       <AboutStory />
       <AboutSkills />
