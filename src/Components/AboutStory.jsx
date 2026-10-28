@@ -1,7 +1,7 @@
 
 export default function AboutStory() {
   return (
-    <div className="w-full bg-white rounded-[70px] py-20 flex flex-col items-center">
+    <div className="w-full bg-white rounded-[80px] py-20 flex flex-col items-center">
 
       <h1 className="text-3xl font-bold text-(--gold-dark) mb-10">هدى أبـحـمــان</h1>
       <div className="flex justify-center items-center gap-6 mb-8">
