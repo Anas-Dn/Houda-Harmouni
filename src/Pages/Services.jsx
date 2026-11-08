@@ -1,6 +1,11 @@
 import { Dot } from "lucide-react";
+import { useContext } from "react";
+import {DataContext} from '../context/DataContext'
+
 
 export default function Services() {
+
+  const {data} = useContext(DataContext)
   return (
     <div className="flex gap-18 px-60 pt-40">
 
@@ -11,8 +16,22 @@ export default function Services() {
           <h1 className="text-6xl text-(--gold) font-bold text-center"> خدماتنا</h1>
         </div>
         <p className="px-15 mb-15 text-center text-(--purple-accent) text-lg font-medium">مجموعة مختارة ومخصصة من برامج المرافقة، الماستركلاس والتأملات لدعم توسعك الشخصي.</p>
-        <hr className="border-0 h-px bg-(--gold) opacity-40 mb-12"/>
+        <hr className="border-0 h-px bg-(--gold) opacity-20 mb-12"/>
+        <div>
+          {data.map((box) => {
+            return(
+            <div key={box.id}>
+              <img src={box.image} alt="" />
+              <h1>{box.h1}</h1>
+              <h2>{box.h2}</h2>
+            </div>
+            )
+          })}
+        </div>
       </div>
+
+
+
 
       <div className="basis-1/3 w-full h-full">
         <div className="shadow-2xl shadow-[rgb(0,0,0,0.2)] h-fit rounded-xl px-11 w-full pt-10 pb-12">
