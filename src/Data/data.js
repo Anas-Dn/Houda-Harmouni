@@ -25,6 +25,7 @@ export const data = [
         duration2:"شهرين 6 لقاءات مباشرة",
         form1:"عن بعد (Zoom)",
         form2:"متابعة في مجموعة تليجرام",
+        category:"massterclass",
     },
     {
         id:2,
@@ -39,6 +40,7 @@ export const data = [
         duration2:"(ساعة و ربع لكل حصة)",
         form1:"Online",
         form2:"(Zoom)",
+        category:"alone class",
     },
     {
         id:3,
@@ -53,6 +55,7 @@ export const data = [
         duration2:"(ساعة و ربع لكل حصة)",
         form1:"Online",
         form2:"(Zoom)",
+        category:"alone class",
     },
     {
         id:4,
@@ -67,6 +70,7 @@ export const data = [
         duration2:"(ساعة و ربع لكل حصة)",
         form1:"Online",
         form2:"(Zoom)",
+        category:"alone class",
     },
     {
         id:5,
@@ -81,6 +85,7 @@ export const data = [
         duration2:"(ساعة و ربع لكل حصة)",
         form1:"Online",
         form2:"(Zoom)",
+        category:"massterclass",
     },
     {
         id:6,
@@ -95,6 +100,7 @@ export const data = [
         duration2:"(ساعة و ربع لكل حصة)",
         form1:"Online",
         form2:"(Zoom)",
+        category:"massterclass",
     },
     {
         id:7,
@@ -109,6 +115,7 @@ export const data = [
         duration2:"(ساعة و ربع لكل حصة)",
         form1:"Online",
         form2:"(Zoom)",
+        category:"massterclass",
     },
     {
         id:8,
@@ -123,6 +130,7 @@ export const data = [
         duration2:"(ساعة و ربع لكل حصة)",
         form1:"Online",
         form2:"(Zoom)",
+        category:"massterclass",
     },
     {
         id:9,
@@ -137,6 +145,7 @@ export const data = [
         duration2:"(ساعة و ربع لكل حصة)",
         form1:"Online",
         form2:"(Zoom)",
+        category:"massterclass",
     },
     {
         id:10,
@@ -151,5 +160,6 @@ export const data = [
         duration2:"",
         form1:"مسجلة",
         form2:"",
+        category:"massterclass",
     },
 ]

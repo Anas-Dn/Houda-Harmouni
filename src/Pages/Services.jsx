@@ -1,12 +1,33 @@
 import { ArrowLeft, Dot } from "lucide-react";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import {DataContext} from '../context/DataContext'
 import { Link } from "react-router-dom";
 
 
 export default function Services() {
+  const handleAll = () => {
+    return setFilteredData(data)
+  }
+  const handleAloneClass = () => {
+    setFilteredData(data.filter((box) => {
+      return box.category === "alone class"
+    }))
+  }
+  const handleRelax = () => {
+    setFilteredData(data.filter((box) => {
+      return box.category === "relax"
+    }))
+  }
+  const handleMasterclass = () => {
+    setFilteredData(data.filter((box) => {
+      return box.category === "massterclass"
+    }))
+  }
 
+  const [active , setActive] = useState("all")
   const {data} = useContext(DataContext)
+  const [filteredData, setFilteredData] = useState(data);
+
   return (
     <div className="flex gap-12 px-60 pt-40 mb-38">
 
@@ -21,7 +42,7 @@ export default function Services() {
         <div className="grid grid-cols-3 gap-6 ">
 
 
-          {data.map((box) => {
+          {filteredData.map((box) => {
             return(
             <div key={box.id} className="w-full h-95">
 
@@ -63,28 +84,48 @@ export default function Services() {
         <div className="shadow-2xl shadow-[rgb(0,0,0,0.2)] h-fit rounded-xl px-11 w-full pt-10 pb-12 sticky top-30">
 
           <div className="flex justify-between items-center mb-10">
-            <h1 className="text-xs font-extrabold text-[rgba(45,18,68,0.5)] cursor-pointer">الفئات</h1>
+            <h1 className="text-xs font-extrabold cursor-pointer text-[rgba(45,18,68,0.5)]">الفئات</h1>
             <hr className="border-0 h-px w-7 opacity-60 bg-(--gold) "/>
           </div>
           <div className="flex justify-between items-center mb-8">
-            <h1 className="text-xs font-extrabold text-[rgba(45,18,68,0.5)] cursor-pointer transition-all duration-300 relative
-            hover:text-(--purple-royal) hover:-translate-x-2"> <Dot className="absolute -right-6 -top-1 text-(--gold)" />  جميع الخدمات</h1>
-            <h6 className="font-extrabold text-xs text-[rgba(45,18,68,0.5)]">10</h6>
+            <h1 className={`text-xs font-extrabold cursor-pointer transition-all duration-300 relative
+            hover:text-(--purple-royal) hover:-translate-x-2 ${active == "all" ? 'text-(--purple-deep)' : 'text-[rgba(45,18,68,0.5)]'}`}
+            onClick={() => {
+              setActive("all");
+              handleAll()
+            }}>
+             <Dot className={`absolute -right-6 -top-1 text-(--gold) ${active == "all" ? 'opacity-100' : 'opacity-0'}`} />  جميع الخدمات</h1>
+            <h6 className={`font-extrabold text-xs ${active == "all" ? 'text-(--gold)' : 'text-[rgba(45,18,68,0.5)]'}`}>10</h6>
           </div>
           <div className="flex justify-between items-center mb-8">
-            <h1 className="text-xs font-extrabold text-[rgba(45,18,68,0.5)] cursor-pointer transition-all duration-300 relative
-            hover:text-(--purple-royal) hover:-translate-x-2"><Dot className="absolute -right-6 -top-1 text-(--gold)" />  حصص فردية</h1>
-            <h6 className="font-extrabold text-xs text-[rgba(45,18,68,0.5)]">3</h6>
+            <h1 className={`text-xs font-extrabold cursor-pointer transition-all duration-300 relative
+            hover:text-(--purple-royal) hover:-translate-x-2 ${active == 'alone class' ? 'text-(--purple-deep)' : 'text-[rgba(45,18,68,0.5)]'}`}
+            onClick={() => {
+                setActive("alone class")
+                handleAloneClass()
+              }}>
+              <Dot className={`absolute -right-6 -top-1 text-(--gold) ${active == "alone class" ? 'opacity-100' : 'opacity-0'}`} />  حصص فردية</h1>
+            <h6 className={`font-extrabold text-xs ${active == "alone class" ? 'text-(--gold)' : 'text-[rgba(45,18,68,0.5)]'}`}>3</h6>
           </div>
           <div className="flex justify-between items-center mb-8">
-            <h1 className="text-xs font-extrabold text-[rgba(45,18,68,0.5)] cursor-pointer transition-all duration-300 relative
-            hover:text-(--purple-royal) hover:-translate-x-2"><Dot className="absolute -right-6 -top-1 text-(--gold)" />  تأمل</h1>
-            <h6 className="font-extrabold text-xs text-[rgba(45,18,68,0.5)]">0</h6>
+            <h1 className={`text-xs font-extrabold cursor-pointer transition-all duration-300 relative
+            hover:text-(--purple-royal) hover:-translate-x-2 ${active == 'relax' ? 'text-(--purple-deep)' : 'text-[rgba(45,18,68,0.5)]'}`}
+            onClick={() => {
+               setActive("relax")
+               handleRelax()
+               }}>
+              <Dot className={`absolute -right-6 -top-1 text-(--gold) ${active == "relax" ? 'opacity-100' : 'opacity-0'}`} />  تأمل</h1>
+            <h6 className={`font-extrabold text-xs ${active == "relax" ? 'text-(--gold)' : 'text-[rgba(45,18,68,0.5)]'}`}>0</h6>
           </div>
           <div className="flex justify-between items-center mb-8">
-            <h1 className="text-xs font-extrabold text-[rgba(45,18,68,0.5)] cursor-pointer transition-all duration-300 relative
-            hover:text-(--purple-royal) hover:-translate-x-2"><Dot className="absolute -right-6 -top-1 text-(--gold)" />  دورات وماستركلاس</h1>
-            <h6 className="font-extrabold text-xs text-[rgba(45,18,68,0.5)]">7</h6>
+            <h1 className={`text-xs font-extrabold cursor-pointer transition-all duration-300 relative
+            hover:text-(--purple-royal) hover:-translate-x-2 ${active == 'massterclass' ? 'text-(--purple-deep)' : 'text-[rgba(45,18,68,0.5)]'}`}
+            onClick={() => {
+              setActive("massterclass");
+              handleMasterclass()
+              }}>
+              <Dot className={`absolute -right-6 -top-1 text-(--gold) ${active == "massterclass" ? 'opacity-100' : 'opacity-0'}`} />  دورات وماستركلاس</h1>
+            <h6 className={`font-extrabold text-xs ${active == "massterclass" ? 'text-(--gold)' : 'text-[rgba(45,18,68,0.5)]'}`}>7</h6>
           </div>
         </div>
       </div>
