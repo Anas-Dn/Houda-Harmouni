@@ -4,7 +4,7 @@ import { MoveLeft } from "lucide-react"
 
 export default function Sec2() {
   return (
-    <div className="flex px-26 py-30 bg-(--bg-light) gap-20">
+    <div className="flex px-60 py-30 bg-(--bg-light) gap-20">
      <div className="basis-2/3 flex flex-col justify-center">
         <h2 className="mb-10 border-r-4 border-(--gold) text-lg font-medium text-(--gold) bg-[#dca0111a] w-fit px-3 py-2 rounded-sm relative right-14 after:absolute after:w-10 after:h-px after:bg-(--gold) after:-right-13 after:top-1/2">رحلة روحانية • لمدة شهرين</h2>
         <h1 className="text-6xl font-bold mb-2 text-(--purple-royal)">رحلة</h1>

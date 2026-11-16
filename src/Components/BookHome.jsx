@@ -3,7 +3,7 @@ import pic from "../assets-home/free-guide-cover.png";
 
 export default function BookHome() {
   return (
-    <div className="bg-white flex py-40 px-30">
+    <div className="bg-white flex py-40 px-60">
       <div className="basis-1/2">
         <div>
             <img loading="lazy" src={pic} alt="" className="w-80 rounded-2xl UpDown " />

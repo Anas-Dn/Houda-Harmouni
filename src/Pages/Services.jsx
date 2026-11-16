@@ -60,7 +60,7 @@ export default function Services() {
                     <h6 className="text-(--gold) font-bold text-xs mb-3">الاستثمار:</h6>
                     <h3 className="flex justify-end-safe text-xl text-white font-bold mb-1.5" dir="ltr">{box.priceDH}</h3>
                     <h4 className="text-xs text-(--gold) font-bold">{box.priceEUR}</h4>
-                    <Link className=" z-50 flex gap-3 mt-auto w-full bg-(--gold) text-(--purple-deep) justify-center items-center py-3.5 rounded-xl hover:bg-white transition-all duration-300">
+                    <Link key={box.id} to={`/BoxDetails/${box.id}`} className=" z-50 flex gap-3 mt-auto w-full bg-(--gold) text-(--purple-deep) justify-center items-center py-3.5 rounded-xl hover:bg-white transition-all duration-300">
                       <h4 className="font-bold text-xs">اكتشف المزيد</h4>
                       <ArrowLeft className="w-4"/>
                     </Link>

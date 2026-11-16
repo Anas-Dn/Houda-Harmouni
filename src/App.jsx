@@ -5,6 +5,7 @@ import Services from "./Pages/Services"
 import Footer from "./Components/Footer"
 import FreeGuide from "./Pages/FreeGuide"
 import Header from "./Components/Header"
+import BoxDetails from "./Components/BoxDetails"
 function App() {
 
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/about" element={<About/>} />
         <Route path="/services" element={<Services/>} />
         <Route path="/free-guide" element={<FreeGuide/>} />
+        <Route path="/BoxDetails/:id" element={<BoxDetails/>} />
       </Routes>
       <Footer />
     </>
