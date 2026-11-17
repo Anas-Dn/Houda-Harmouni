@@ -2,6 +2,8 @@ import { useContext } from "react"
 import { DataContext } from "../context/DataContext"
 import { useParams } from "react-router-dom";
 import BoxDetailsHome from "./BoxDetailsHome";
+import TestemonialDetails from "./TestemonialDetails";
+import PaysMethods from "./PaysMethods";
 
 export default function BoxDetails() {
   
@@ -13,6 +15,8 @@ export default function BoxDetails() {
   return (
     <div className="">
         <BoxDetailsHome box={box}/>
+        <TestemonialDetails />
+        <PaysMethods/>
     </div>
   )
 }
