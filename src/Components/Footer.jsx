@@ -5,7 +5,7 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 export default function Footer() {
   return (
-    <div>
+    <div className="bg-[#f3ede4]">
       <hr className="border-px opacity-20 bg-gray-400 h-full " />
       <div className="grid grid-cols-4 pt-12 pb-5 px-36 gap-20">
 
