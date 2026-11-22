@@ -66,7 +66,7 @@ export default function Header() {
           </Link>
 
           <div className="[@media(min-width:1100px)]:hidden block">
-            <Menu className=" text-(--gold)" />
+            <Menu className=" text-(--gold)" onClick={() => setIsOpen(true)} />
           </div>
 
         <div className={`absolute ${ isOpen ? "inset-0  top-[50%]" : "translate-400"}`}>
