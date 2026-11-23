@@ -4,6 +4,7 @@ import logo from "../assets-home/logo-premium.png"
 import { Menu, MoveLeft } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import MobileMenu from "./MobileMenu";
 
 
 
@@ -23,7 +24,7 @@ export default function Header() {
     };
   } , [])
 
-  const [isOpen , setIsOpen] = useState(true);
+  const [isOpen , setIsOpen] = useState(false);
 
 
   return (
@@ -69,30 +70,7 @@ export default function Header() {
             <Menu className=" text-(--gold)" onClick={() => setIsOpen(true)} />
           </div>
 
-        <div className={`absolute ${ isOpen ? "inset-0  top-[50%]" : "translate-400"}`}>
-
-            <ul className="bg-[#f3ede4] flex flex-col items-center">
-              <li className=" font-semibold text-black relative after:absolute after:bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:bg-(--gold) hover:after:w-full after:transition-all after:duration-400">
-                <NavLink to="/" className={`text-black  after:absolute after:bottom-0.5 after:left-0 after:h-0.5 after:bg-(--gold) after:transition-all after:duration-300 ${isHomeActive ? "after:w-full" : "after:w-0 hover:after:w-full"}`}>الرئيسية</NavLink>
-            </li>
-            <li className=" font-semibold text-black relative after:absolute after:bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:bg-(--gold) hover:after:w-full after:transition-all after:duration-400">
-                <NavLink to="/about" className={({ isActive }) => `text-black  after:absolute after:bottom-0.5 after:left-0 after:h-0.5 after:bg-(--gold) after:transition-all after:duration-300 ${isActive ? "after:w-full" : "after:w-0 hover:after:w-full"}`}>من أنا</NavLink>
-            </li>
-            <li className=" font-semibold text-black relative after:absolute after:bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:bg-(--gold) hover:after:w-full after:transition-all after:duration-400">
-                <NavLink to="/services" className={({ isActive }) => `text-black  after:absolute after:bottom-0.5 after:left-0 after:h-0.5 after:bg-(--gold) after:transition-all after:duration-300 ${isActive ? "after:w-full" : "after:w-0 hover:after:w-full"}`}>الخدمات</NavLink>
-            </li>
-            <li className=" font-semibold text-black relative after:absolute after:bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:bg-(--gold) hover:after:w-full after:transition-all after:duration-400">
-                <NavLink to="/free-guide" className={({ isActive }) => `text-black  after:absolute after:bottom-0.5 after:left-0 after:h-0.5 after:bg-(--gold) after:transition-all after:duration-300 ${isActive ? "after:w-full" : "after:w-0 hover:after:w-full"}`}>كتيب مجاني</NavLink>
-            </li>
-            <li className=" font-semibold text-black relative after:absolute after:bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:bg-(--gold) hover:after:w-full after:transition-all after:duration-400">
-                <HashLink smooth to="/#Testemonials" className={`text-black  after:absolute after:bottom-0.5 after:left-0 after:h-0.5 after:bg-(--gold) after:transition-all after:duration-300 ${location.hash === "#Testemonials" ? "after:w-full" : "after:w-0 hover:after:w-full"}`}>آراء الناس</HashLink>
-            </li>
-            <li className=" font-semibold text-black relative after:absolute after:bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:bg-(--gold) hover:after:w-full after:transition-all after:duration-400">
-                <HashLink smooth to="/#Q&A" className={`text-black  after:absolute after:bottom-0.5 after:left-0 after:h-0.5 after:bg-(--gold) after:transition-all after:duration-300 ${location.hash === "#Q&A" ? "after:w-full" : "after:w-0 hover:after:w-full"}`}>الأسئلة</HashLink>
-            </li>
-            </ul>
-
-          </div>
+        <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} isHomeActive={isHomeActive}/>
 
 
         </div>
