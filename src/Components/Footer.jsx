@@ -40,7 +40,7 @@ export default function Footer() {
 
       </div>
       <hr className="border-px opacity-10 bg-gray-400 h-full "/>
-      <div className="lg:px-36 sm:px-20 px-10 sm:py-6 py-3 flex justify-between">
+      <div className="lg:px-36 sm:px-20 px-10 sm:py-6 py-3 flex flex-col [@media(min-width:500px)]:flex-row gap-4 justify-between items-center">
         <h1 className="text-xs font-medium cursor-pointer">© 2026 HOUDA HARMONY. فن التوازن.</h1>
         <div className="flex gap-6">
           <h1 className="text-xs font-medium cursor-pointer">سياسة الخصوصية</h1>
