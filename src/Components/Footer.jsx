@@ -32,10 +32,16 @@ export default function Footer() {
           <p className="text-(--purple-royal) font-bold mb-4 text-sm hover:text-(--gold) cursor-pointer duration-300">دروس مسجلة</p>
           <p className="text-(--purple-royal) font-bold mb-4 text-sm hover:text-(--gold) cursor-pointer duration-300">تأملات</p>
         </div>
-        <div className="flex flex-col sm:justify-start sm:items-start items-center justify-center">
+        <div className="flex flex-col sm:items-start items-center justify-center">
           <h1 className="text-(--gold) font-bold sm:mb-8 mb-5 text-xs">اتصال</h1>
-          <p dir="ltr" className="ml-26 gap-2 flex text-(--purple-royal) font-bold mb-4 text-sm hover:text-(--gold) cursor-pointer duration-300" ><FontAwesomeIcon icon={faPhone} /><p>+212 661-491819</p></p>
-          <p dir="ltr" className="ml-25 gap-2 flex text-(--purple-royal) font-bold mb-4 text-sm hover:text-(--gold) cursor-pointer duration-300" ><FontAwesomeIcon icon={faPhone} /><p>+212 643-354739</p></p>
+          <p dir="ltr" className="gap-2 flex text-center justify-center text-(--purple-royal) font-bold mb-4 text-sm hover:text-(--gold) cursor-pointer duration-300" >
+            <FontAwesomeIcon icon={faPhone} />
+            <p>+212 661-491819</p>
+          </p>
+          <p dir="ltr" className="gap-2 flex text-center justify-center text-(--purple-royal) font-bold mb-4 text-sm hover:text-(--gold) cursor-pointer duration-300" >
+            <FontAwesomeIcon icon={faPhone} />
+            <p>+212 643-354739</p>
+          </p>
         </div>
 
       </div>

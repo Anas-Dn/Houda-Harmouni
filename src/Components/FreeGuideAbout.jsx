@@ -8,7 +8,7 @@ export default function FreeGuideAbout() {
           <h1 className="text-center text-3xl text-(--purple-deep) mb-3 font-extrabold">ماذا ستجد داخل الدليل؟</h1>
           <h2 className="text-center text-lg font-extrabold text-(--gold)">من خلال هذا الكتيب ستكتشف:</h2>
       
-      <div className="grid grid-cols-1 [@media(min-width:600px)]:grid-cols-2 [@media(min-width:1050px)]:grid-cols-4 gap-6 mt-14">
+      <div className="grid grid-cols-1 min-[600px]:grid-cols-2 min-[1050px]:grid-cols-4 gap-6 mt-14">
 
         <div className=" border border-amber-100 bg-[rgb(250,246,238)] flex items-center justify-center flex-col py-10 px-18 rounded-4xl gap-3
                         hover:scale-102 hover:border-(--gold) transition-all duration-300">
