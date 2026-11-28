@@ -4,7 +4,7 @@ import image from "../assets-home/free-guide-cover.png"
 
 export default function FreeGuideHome() {
   return (
-    <div className="pt-40 pb-20 flex items-center justify-center gap-36 [@media(min-width:1050px)]:flex-row flex-col">
+    <div className="pt-40 pb-20 mx-10 flex items-center justify-center gap-36 [@media(min-width:1050px)]:flex-row flex-col">
 
         <div className="[@media(min-width:600px)]:w-140 w-90 mt-12">
             <h1 className="text-5xl font-extrabold text-white mb-3 [@media(min-width:1050px)]:text-start text-center">دليلك العملي</h1>
